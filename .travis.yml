@@ -15,13 +15,13 @@ install:
   - npm install
 script:
   - npm build
-  - docker build -t macaicedo/back .
-  - docker tag macaicedo/back registry.heroku.com/$HEROKU_APP_NAME/web
+  - docker build -t macaicedo/completo .
+  - docker tag macaicedo/completp registry.heroku.com/$HEROKU_APP_NAME/web
 deploy:
   provider: script
   script:
     # push to dockerhub
-    docker push macaicedo/back;
+    docker push macaicedo/completo;
     docker push registry.heroku.com/$HEROKU_APP_NAME/web;
     heroku container:release web --app $HEROKU_APP_NAME
   on:
