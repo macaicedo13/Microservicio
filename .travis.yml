@@ -16,7 +16,7 @@ install:
 script:
   - npm build
   - docker build -t macaicedo/completo .
-  - docker tag macaicedo/completp registry.heroku.com/$HEROKU_APP_NAME/web
+  - docker tag macaicedo/completo registry.heroku.com/$HEROKU_APP_NAME/web
 deploy:
   provider: script
   script:
